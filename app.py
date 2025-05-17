@@ -59,14 +59,14 @@ Total Calories Per Serving: <number>
             )
 
         output = response.text.strip()
-        st.markdown("### 🧠 Gemini Output")
-        st.text(output)
+        # st.markdown("### 🧠 Gemini Output")
+        # st.text(output)
 
         # Extract clean data
         dish = re.search(r'Dish Name:\s*(.+)', output)
         ingredients = re.search(r'Ingredients:\s*(.+)', output)
         cal_per_ing = re.search(r'Calories Per Ingredient:\s*(.+)', output)
-        total_cal = re.search(r'Total Calories:\s*(\d+)', output)
+        total_cal = re.search(r'Total Calories Per Serving:\s*(\d+)', output)
 
         st.markdown("### ✅ Final Result")
         st.write("🍽️ **Dish Name:**", dish.group(1).strip() if dish else "N/A")

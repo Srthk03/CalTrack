@@ -59,8 +59,8 @@ Total Calories Per Serving: <number>
             )
 
         output = response.text.strip()
-        # st.markdown("### 🧠 Gemini Output")
-        # st.text(output)
+        st.markdown("### 🧠 Gemini Output")
+        st.text(output)
 
         # Extract clean data
         dish = re.search(r'Dish Name:\s*(.+)', output)

@@ -69,7 +69,7 @@ Total Calories Per Serving: <number>
         total_cal = re.search(r'Total Calories Per Serving:\s*(\d+)', output)
 
         st.markdown("### ✅ Final Result")
-        st.write("🍽️ **Dish Name:**", dish.group(1).strip() if dish else "N/A")
-        st.write("🧾 **Ingredients:**", ingredients.group(1).strip() if ingredients else "N/A")
-        st.write("🔥 **Calories Per Ingredient:**", cal_per_ing.group(1).strip() if cal_per_ing else "N/A")
-        st.write("🔥 **Total Calories:**", total_cal.group(1).strip() if total_cal else "N/A")
+        st.write("🍽️ **Dish Name:**", dish.group(1).strip() if dish else "Please Try Again")
+        st.write("🧾 **Ingredients:**", ingredients.group(1).strip() if ingredients else "Please Try Again")
+        st.write("🔥 **Calories Per Ingredient:**", cal_per_ing.group(1).strip() if cal_per_ing else "Please Try Again")
+        st.write("🔥 **Total Calories:**", total_cal.group(1).strip() if total_cal else "Please Try Again")
